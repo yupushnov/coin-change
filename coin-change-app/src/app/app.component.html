@@ -1,0 +1,44 @@
+<div class="title">
+  <h1>
+    Simple Coin Change App
+  </h1>
+</div>
+<div class="mainContainer">
+  <h2>
+    Get your change!
+  </h2>
+  <div class="section">
+    <div>
+      <mat-slide-toggle [formControl]="slideControl" (change)="onSlideChange()">
+        Toggle to enable "optimal change" mode
+      </mat-slide-toggle>
+    </div>
+    <div class="inputField">
+      <label for="changeControl">{{ isOptimalMode ? 'Optimal ': '' }}Change for</label>
+      <mat-form-field class="input">
+        <input matInput type="number" [formControl]="changeControl" (change)="onChangeControlChange()" step="0.01" required>
+        <span matPrefix>€&nbsp;</span>
+        <mat-error *ngIf="changeControl.invalid">Correct amount is required</mat-error>
+      </mat-form-field>
+      <button class="button" mat-stroked-button (click)="getChange()" [disabled]="changeControl.invalid">Get</button>
+    </div>
+    <div *ngIf="response">
+      <p>Your change:</p>
+      <ul>
+        <li *ngFor='let change of response'>
+          {{ change.coin }}: {{ change.quantity }}
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="responseError">
+      <p>Error: {{ responseError.error }}</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p>Available change:</p>
+    <app-change-list [changeList]="availableChange$"></app-change-list>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

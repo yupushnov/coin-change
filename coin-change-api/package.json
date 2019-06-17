@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Coin Change API",
+  "main": "handler.js",
+  "scripts": {
+    "test": "jest --no-cache"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/jest": "^24.0.13",
+    "@types/node": "^8.0.57",
+    "jest": "^24.8.0",
+    "serverless-webpack": "^5.1.1",
+    "source-map-support": "^0.5.6",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.5.0"
+  },
+  "author": "Yury Pushnov",
+  "license": "MIT"
+}

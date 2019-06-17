@@ -1,0 +1,32 @@
+.title {
+  text-align: center;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+
+  .section {
+    margin-top: 25px;
+
+    .inputField {
+      .input {
+        margin: 0 10px;
+      }
+
+      .button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.mainContainer > * {
+  margin: 0 1%;
+  width: 100%;
+}
+
+
+
+

@@ -1,0 +1,24 @@
+ping:
+  handler: handler.ping
+  events:
+    - http:
+        method: get
+        path: ping
+availableChange:
+  handler: handler.availableChange
+  events:
+    - http:
+        method: get
+        path: availableChange
+optimalChange:
+  handler: handler.optimalChange
+  events:
+    - http:
+        method: post
+        path: optimalChange
+change:
+  handler: handler.change
+  events:
+    - http:
+        method: post
+        path: change

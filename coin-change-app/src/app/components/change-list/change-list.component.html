@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor='let change of changeList | async'>
+    {{ change.coin }}: {{ change.quantity }}
+  </li>
+</ul>
